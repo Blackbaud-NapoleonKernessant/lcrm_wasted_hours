@@ -42,3 +42,10 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.1'
 end
+
+#Heroku integration has previously relied on using the Rails plugin system, which has been removed from Rails 4.
+# To enable features such as static asset serving and logging on Heroku please add rails_12factor gem to your Gemfile.
+#At the end of Gemfile add:
+group :production do
+  gem 'rails_12factor'
+end

@@ -56,3 +56,4 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 13:36:25
 
 
 Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 13:36:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (70.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
