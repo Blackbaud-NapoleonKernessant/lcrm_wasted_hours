@@ -1,0 +1,9 @@
+*.svn
+*.idea
+pkg
+.bundle
+*.rbx
+coverage
+Gemfile.lock
+config/secrets.yml
+config/database.yml
