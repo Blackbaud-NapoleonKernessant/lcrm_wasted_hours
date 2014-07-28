@@ -10,6 +10,61 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+  *= require jquery-ui
+ *= require dataTables/jquery.dataTables
  *= require_tree .
  *= require_self
  */
+
+html,
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+#wrapper {
+    min-height:100%;
+    position:relative;
+}
+
+#header {
+    padding:10px;
+}
+
+#content {
+    padding:10px;
+    padding-bottom:80px;   /* Height of the footer element */
+}
+
+.table td, .table th {
+    border: none;
+}
+
+table.table.table-condensed {
+    border: 1px solid black;
+}
+
+#footer {
+    width:100%;
+    height:80px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    padding: 1%;
+    background-color: #f9f9f9;
+}
+
+/* current year remove new line */
+#currentYear {
+    display:inline-block;
+}
+footer .footer-left { width: 45%; float:left; text-align:left; }
+footer .footer-right { width: 45%; float:right; text-align:right; }
+
+
+/*#5F7081*/
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+    background-color: #E7FF9E;
+}

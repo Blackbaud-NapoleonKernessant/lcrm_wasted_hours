@@ -6,9 +6,27 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
-</body>
+    <body>
+    <div id="wrapper">
+      <div id="header">
+        <div class="navbar navbar-default" role="navigation">
+          <%= link_to "LCRM WASTED HOURS",
+                      {controller:'wasted_hours', action:'index' },
+                      class:"navbar-brand" %>
+        </div>
+      </div>
+      <div id="content">
+        <div class="container">
+          <div class="row clearfix">
+            <div class="col-md-12 column">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <%= render(:partial => "footer") %>
+      </div>
+    </div>
+    </body>
 </html>

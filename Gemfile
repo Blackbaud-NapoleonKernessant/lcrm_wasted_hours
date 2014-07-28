@@ -39,6 +39,12 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'jquery-ui-rails', '~> 5.0.0'
+gem 'jquery-datatables-rails', '~> 2.1.10.0.3'
+gem 'autoprefixer-rails', '~> 2.1.1.20140710'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.1'
 end

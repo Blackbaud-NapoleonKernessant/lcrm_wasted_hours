@@ -1,12 +1,16 @@
 development:
   adapter: postgresql
   encoding: unicode
+  username: napoleon
+  password: Password0
   database: lcrm_wasted_hours_development
 
 
 test:
   adapter: postgresql
   encoding: unicode
+  username: napoleon
+  password: Password0
   database: lcrm_wasted_hours_test
 
 
@@ -14,5 +18,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
+  username: napoleon
+  password: Password0
   database: lcrm_wasted_hours_production
 

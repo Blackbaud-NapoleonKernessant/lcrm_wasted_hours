@@ -11,6 +11,22 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
+//= require jquery-ui
+//= require dataTables/jquery.dataTables
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+function dataTableFunction(){
+    $(document).ready(function(){
+        // For fixed width containers
+        $('#customers').dataTable({
+            sDom: "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+            "aaSorting": [[ 0, "desc" ]],
+            sPaginationType:  "full_numbers"
+        });
+    });
+}
