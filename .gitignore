@@ -4,4 +4,4 @@ pkg
 .bundle
 *.rbx
 coverage
-config/secrets.yml
+
