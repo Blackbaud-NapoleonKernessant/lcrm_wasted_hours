@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: lcrm_wasted_hours_development
+
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: lcrm_wasted_hours_test
+
+
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: lcrm_wasted_hours_production
+
