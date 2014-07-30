@@ -1,9 +1,10 @@
-<h1>WastedHours#index</h1>
-<p>Find me in app/views/wasted_hours/index.html.erb</p>
-
-
-
 <div class="row">
+  <div class="span12">
+    <%= link_to "New Wasted Hour(s)",
+                {controller:'wasted_hours', action:'new' },
+                class:"btn btn-success btn-large" %>
+  </div>
+  <br/>
   <div class="span12">
     <%= render(partial: "data_table") %>
   </div>
