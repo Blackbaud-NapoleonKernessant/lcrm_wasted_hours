@@ -4,51 +4,18 @@
   <h2>
     Create New Wasted Hours For <%=  @today_date %>
   </h2>
-  <p>
-    Create a new Wasted Hour Record
-  </p>
 
-  <%= form_tag({ :controller => :wasted_hours, :action => :index },
+
+  <%= form_tag({ :controller => :wasted_hours, :action => :process_new_form },
                method: 'get', class: 'form-horizontal') do %>
-
-      <div class="form-group">
-        <%= label_tag('todayDate',"Today's Date:",class: 'col-sm-2 control-label') %>
-        <div class="col-sm-10">
-          <%= date_field_tag('date', 'todayDate',value: @today_date) %>
-        </div>
-      </div>
 
       <div class="form-group">
         <%= label_tag('problemCategory','Problem Category:',class: 'col-sm-2 control-label') %>
         <div class="col-sm-10">
           <select name="problemCategory" id="problemCategory" required="required">
-            <option name="problemCategory"  id="problemCategory-1" value="Alfred">
-              Alfred
-            </option>
-            <option name="problemCategory"  id="problemCategory-2" value="Jenkins">
-              Jenkins
-            </option>
-            <option name="problemCategory"  id="problemCategory-3" value="Build Failure">
-              Build Failure
-            </option>
-            <option name="problemCategory" id="problemCategory-4" value="Dev Environment">
-              Dev Environment
-            </option>
-            <option name="problemCategory" id="problemCategory-5" value="Training / Questions">
-              Training / Questions
-            </option>
-            <option name="problemCategory" id="problemCategory-6" value="Meeting">
-              Meeting
-            </option>
-            <option name="problemCategory" id="problemCategory-7" value="VPN / Connection">
-              VPN / Connection
-            </option>
-            <option name="problemCategory" id="problemCategory-8" value="Escalation">
-              Escalation
-            </option>
-            <option name="problemCategory" id="problemCategory-9" value="Other">
-              Other
-            </option>
+              <%  @problems.each do |value| %>
+                  <option value=<%= "#{value}" %>><%= "#{value}" %></option>
+              <% end %>
           </select>
         </div>
       </div>

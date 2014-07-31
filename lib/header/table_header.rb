@@ -8,9 +8,23 @@ class TableHeader
     table_header_hash['date'] = 'Date'
     table_header_hash['category'] = 'Category'
     table_header_hash['total_employees'] = 'Total Employees Affected'
-    table_header_hash['category'] = 'Category'
+    table_header_hash['hours_lost_per_employee'] = 'Hours Lost Per Employee'
     table_header_hash['description'] = 'Description'
     table_header_hash['total_hours'] = 'Total Hours Wasted'
     table_header_hash
+  end
+
+  def problem_category
+    category_array = []
+    category_array << 'Alfred'
+    category_array << 'Jenkins'
+    category_array << 'Build Failure'
+    category_array << 'Dev Environment'
+    category_array << 'Training / Questions'
+    category_array << 'Meeting'
+    category_array << 'VPN / Connection'
+    category_array << 'Escalation'
+    category_array << 'Other'
+    category_array
   end
 end
