@@ -21793,3 +21793,851 @@ Migrating to TeamToLostProductivity (20140801021758)
   [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLostProductivities (20140801024434)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (162.7ms)[0m  [1mCREATE TABLE "lost_productivities" ("id" serial primary key, "team_name" character varying(255), "problem_category" character varying(255), "description" character varying(255), "incident_date" timestamp, "total_employees_affected" integer, "hours_lost_per_employee" float, "total_hours_lost_employees" float, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "lost_productivities" already exists
+: CREATE TABLE "lost_productivities" ("id" serial primary key, "team_name" character varying(255), "problem_category" character varying(255), "description" character varying(255), "incident_date" timestamp, "total_employees_affected" integer, "hours_lost_per_employee" float, "total_hours_lost_employees" float, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLostProductivities (20140801024434)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (5.4ms)[0m  [1mCREATE TABLE "lost_productivities" ("id" serial primary key, "team_name" character varying(255), "problem_category" character varying(255), "description" character varying(255), "incident_date" timestamp, "total_employees_affected" integer, "hours_lost_per_employee" float, "total_hours_lost_employees" float, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "lost_productivities" already exists
+: CREATE TABLE "lost_productivities" ("id" serial primary key, "team_name" character varying(255), "problem_category" character varying(255), "description" character varying(255), "incident_date" timestamp, "total_employees_affected" integer, "hours_lost_per_employee" float, "total_hours_lost_employees" float, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLostWorks (20140801025033)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (148.7ms)[0m  [1mCREATE TABLE "lost_works" ("id" serial primary key, "team_name" character varying(255), "problem_category" character varying(255), "description" character varying(255), "incident_date" timestamp, "total_employees_affected" integer, "hours_lost_per_employee" float, "total_hours_lost_employees" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140801025033"]]
+  [1m[36m (19.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-31 22:03:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WastedHoursController#index as HTML
+  [1m[35mLostWork Load (1.5ms)[0m  SELECT "lost_works".* FROM "lost_works"
+  Rendered wasted_hours/_data_table.html.erb (3.3ms)
+  Rendered wasted_hours/index.html.erb within layouts/application (37.5ms)
+  Rendered wasted_hours/_footer.html.erb (35.0ms)
+Completed 200 OK in 4140ms (Views: 4012.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery-ui/theme.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:56 -0500
+
+
+Started GET "/assets/jquery-ui/menu.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:56 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:56 -0500
+
+
+Started GET "/assets/jquery-ui/accordion.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:56 -0500
+
+
+Started GET "/assets/jquery-ui/core.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/button.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/slider.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/dataTables/jquery.dataTables.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui/base.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/jquery-ui.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:57 -0500
+
+
+Started GET "/assets/wasted_hours.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/dataTable_highlight_table.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/jquery-ui/all.css?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/jquery-ui/accordion.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/jquery-ui/position.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:58 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/button.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/mouse.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/widget.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/menu.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/droppable.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-bounce.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-clip.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-explode.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-drop.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fold.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fade.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-highlight.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-shake.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-scale.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-size.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-puff.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect-slide.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/slider.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.js?body=1" for 127.0.0.1 at 2014-07-31 22:03:59 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:00 -0500
+
+
+Started GET "/assets/jquery-ui/effect-transfer.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:00 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:00 -0500
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:00 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:00 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:00 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:00 -0500
+
+
+Started GET "/assets/wasted_hours.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:00 -0500
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:00 -0500
+
+
+Started GET "/assets/blackbaud-logo-cozy.png" for 127.0.0.1 at 2014-07-31 22:04:01 -0500
+
+
+Started GET "/assets/dataTables/sort_both.png" for 127.0.0.1 at 2014-07-31 22:04:01 -0500
+
+
+Started GET "/assets/dataTables/sort_desc.png" for 127.0.0.1 at 2014-07-31 22:04:02 -0500
+
+
+Started GET "/wasted_hours/new" for 127.0.0.1 at 2014-07-31 22:04:06 -0500
+Processing by WastedHoursController#new as HTML
+  Rendered wasted_hours/new.html.erb within layouts/application (3.7ms)
+  Rendered wasted_hours/_footer.html.erb (54.0ms)
+Completed 200 OK in 211ms (Views: 210.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wasted_hours/process_new_form?utf8=%E2%9C%93&teamName=Martell&problemCategory=Alfred&numberOfEmployee=1&numberOfHours=0.25&description=Demo+1&commit=Create" for 127.0.0.1 at 2014-07-31 22:04:23 -0500
+Processing by WastedHoursController#process_new_form as HTML
+  Parameters: {"utf8"=>"✓", "teamName"=>"Martell", "problemCategory"=>"Alfred", "numberOfEmployee"=>"1", "numberOfHours"=>"0.25", "description"=>"Demo 1", "commit"=>"Create"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (185.4ms)[0m  INSERT INTO "lost_works" ("created_at", "description", "hours_lost_per_employee", "incident_date", "problem_category", "team_name", "total_employees_affected", "total_hours_lost_employees", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", "2014-08-01 03:04:23.285733"], ["description", "Demo 1"], ["hours_lost_per_employee", 0.25], ["incident_date", "2014-08-01 03:04:23.202772"], ["problem_category", "Alfred"], ["team_name", "Martell"], ["total_employees_affected", 1], ["total_hours_lost_employees", 0.25], ["updated_at", "2014-08-01 03:04:23.285733"]]
+  [1m[36m (104.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 576ms (ActiveRecord: 296.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-31 22:04:23 -0500
+Processing by WastedHoursController#index as HTML
+  [1m[35mLostWork Load (0.9ms)[0m  SELECT "lost_works".* FROM "lost_works"
+  Rendered wasted_hours/_data_table.html.erb (2.9ms)
+  Rendered wasted_hours/index.html.erb within layouts/application (25.9ms)
+  Rendered wasted_hours/_footer.html.erb (72.8ms)
+Completed 200 OK in 184ms (Views: 182.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery-ui/core.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/accordion.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/theme.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/menu.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/slider.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/button.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/dataTable_highlight_table.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/all.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/wasted_hours.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery-ui/base.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/dataTables/jquery.dataTables.css?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:24 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/widget.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/accordion.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/button.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/position.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/droppable.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-bounce.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-clip.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-highlight.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-explode.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/menu.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fold.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-drop.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-scale.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/mouse.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-size.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fade.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-puff.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-shake.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-slide.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/slider.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/wasted_hours.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/jquery-ui/effect-transfer.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/blackbaud-logo-cozy.png" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/dataTables/sort_desc.png" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/assets/dataTables/sort_both.png" for 127.0.0.1 at 2014-07-31 22:04:25 -0500
+
+
+Started GET "/wasted_hours/new" for 127.0.0.1 at 2014-07-31 22:04:48 -0500
+Processing by WastedHoursController#new as HTML
+  Rendered wasted_hours/new.html.erb within layouts/application (2.3ms)
+  Rendered wasted_hours/_footer.html.erb (0.6ms)
+Completed 200 OK in 234ms (Views: 232.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wasted_hours/process_new_form?utf8=%E2%9C%93&teamName=Martell&problemCategory=Support&numberOfEmployee=1&numberOfHours=1.25&description=Demo2&commit=Create" for 127.0.0.1 at 2014-07-31 22:05:17 -0500
+Processing by WastedHoursController#process_new_form as HTML
+  Parameters: {"utf8"=>"✓", "teamName"=>"Martell", "problemCategory"=>"Support", "numberOfEmployee"=>"1", "numberOfHours"=>"1.25", "description"=>"Demo2", "commit"=>"Create"}
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "lost_works" ("created_at", "description", "hours_lost_per_employee", "incident_date", "problem_category", "team_name", "total_employees_affected", "total_hours_lost_employees", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", "2014-08-01 03:05:17.061504"], ["description", "Demo2"], ["hours_lost_per_employee", 1.25], ["incident_date", "2014-08-01 03:05:17.059943"], ["problem_category", "Support"], ["team_name", "Martell"], ["total_employees_affected", 1], ["total_hours_lost_employees", 1.25], ["updated_at", "2014-08-01 03:05:17.061504"]]
+  [1m[36m (13.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-31 22:05:17 -0500
+Processing by WastedHoursController#index as HTML
+  [1m[35mLostWork Load (0.6ms)[0m  SELECT "lost_works".* FROM "lost_works"
+  Rendered wasted_hours/_data_table.html.erb (2.5ms)
+  Rendered wasted_hours/index.html.erb within layouts/application (36.7ms)
+  Rendered wasted_hours/_footer.html.erb (16.0ms)
+Completed 200 OK in 221ms (Views: 219.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery-ui/accordion.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/core.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/menu.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/theme.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/button.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/slider.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/base.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/dataTables/jquery.dataTables.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/all.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/dataTable_highlight_table.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/wasted_hours.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui.css?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/widget.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/accordion.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/position.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/mouse.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/button.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/menu.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-bounce.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-clip.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/droppable.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-drop.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-explode.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fade.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fold.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-slide.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-highlight.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-size.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-scale.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/slider.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-puff.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-shake.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-transfer.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/wasted_hours.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-31 22:05:19 -0500
+
+
+Started GET "/assets/blackbaud-logo-cozy.png" for 127.0.0.1 at 2014-07-31 22:05:19 -0500
+
+
+Started GET "/assets/dataTables/sort_both.png" for 127.0.0.1 at 2014-07-31 22:05:19 -0500
+
+
+Started GET "/assets/dataTables/sort_desc.png" for 127.0.0.1 at 2014-07-31 22:05:19 -0500

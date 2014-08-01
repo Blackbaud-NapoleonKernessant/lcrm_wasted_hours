@@ -8,6 +8,7 @@
       <%  @table_body.each do |lost_productivity| %>
           <tr>
             <td><%= lost_productivity.created_at.strftime("%m/%d/%Y %H:%M %Z") %></td>
+            <td><%= lost_productivity.team_name %></td>
             <td><%= lost_productivity.problem_category %></td>
             <td><%= lost_productivity.total_employees_affected %></td>
             <td><%= lost_productivity.hours_lost_per_employee %></td>

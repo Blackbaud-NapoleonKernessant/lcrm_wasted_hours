@@ -4,18 +4,20 @@ class WastedHoursController < ApplicationController
   def index
     header = TableHeader.new
     @table_header =  header.table_header
-    @table_body = LostProductivity.all
+    @table_body = LostWork.all
   end
 
   def new
+    @team_names = TableHeader.new.team_names
     @problems = TableHeader.new.problem_category
     @today_date = Time.now.strftime("%m/%d/%Y")
     @current_year = Time.new.year
   end
 
   def process_new_form
-    LostProductivity.create do |lost_productivity|
-      lost_productivity.creation_date = Time.now.strftime("%m/%d/%Y")
+    LostWork.create do |lost_productivity|
+      lost_productivity.incident_date = Time.now
+      lost_productivity.team_name = params[:teamName]
       lost_productivity.problem_category = params[:problemCategory]
       lost_productivity.total_employees_affected = params[:numberOfEmployee]
       lost_productivity.hours_lost_per_employee = params[:numberOfHours]
@@ -45,6 +47,6 @@ class WastedHoursController < ApplicationController
   # end
 
   def admin_factory_reset
-    LostProductivity.delete_all
+    LostWork.delete_all
   end
 end
