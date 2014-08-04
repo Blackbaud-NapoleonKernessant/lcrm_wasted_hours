@@ -1,0 +1,31 @@
+<table class="table table-striped table-bordered table-hover" id="customers">
+  <thead>
+  <%  @table_header.each do |key, value| %>
+      <th><%= "#{value}" %></th>
+  <% end %>
+  </thead>
+  <tbody>
+  <%  @table_body.each do |lost_productivity| %>
+      <tr>
+        <td><%= lost_productivity.created_at.strftime("%m/%d/%Y %H:%M %Z") %></td>
+        <td><%= lost_productivity.team_name %></td>
+        <td><%= lost_productivity.problem_category %></td>
+        <td><%= lost_productivity.total_employees_affected %></td>
+        <td><%= lost_productivity.hours_lost_per_employee %></td>
+        <td><%= lost_productivity.description %></td>
+        <td><%= lost_productivity.total_hours_lost_employees %></td>
+        <td>
+          <%= link_to 'Delete', {controller:'wasted_hours', action:'delete_column_action', id: lost_productivity.id} %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+<script>
+    dataTableFunction();
+</script>

@@ -16,17 +16,6 @@ ActiveRecord::Schema.define(version: 20140801025033) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "lost_productivities", force: true do |t|
-    t.string   "problem_category"
-    t.string   "description"
-    t.date     "creation_date"
-    t.integer  "total_employees_affected"
-    t.float    "hours_lost_per_employee"
-    t.float    "total_hours_lost_employees"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "lost_works", force: true do |t|
     t.string   "team_name"
     t.string   "problem_category"

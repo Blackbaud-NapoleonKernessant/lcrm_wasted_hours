@@ -15,6 +15,19 @@ class TableHeader
     table_header_hash
   end
 
+  def table_header_delete
+    table_header_hash = {}
+    table_header_hash['date'] = 'Date'
+    table_header_hash['teamName'] = 'teamName'
+    table_header_hash['category'] = 'Category'
+    table_header_hash['total_employees'] = 'Total Employees Affected'
+    table_header_hash['hours_lost_per_employee'] = 'Hours Lost Per Employee'
+    table_header_hash['description'] = 'Description'
+    table_header_hash['total_hours'] = 'Total Hours Wasted'
+    table_header_hash['delete'] = 'Delete'
+    table_header_hash
+  end
+
   def problem_category
     category_array = []
     category_array << 'Alfred'
