@@ -50,15 +50,15 @@ class WastedHoursController < ApplicationController
   #   LostWork.delete_all
   # end
 
-  def delete_column
-    header = TableHeader.new
-    @table_header =  header.table_header_delete
-    @table_body = LostWork.all
-  end
-
-  def delete_column_action
-    field_id = params[:id]
-    LostWork.find(field_id).destroy
-    redirect_to :controller => :wasted_hours, :action => :index
-  end
+  # def delete_column
+  #   header = TableHeader.new
+  #   @table_header =  header.table_header_delete
+  #   @table_body = LostWork.all
+  # end
+  #
+  # def delete_column_action
+  #   field_id = params[:id]
+  #   LostWork.find(field_id).destroy
+  #   redirect_to :controller => :wasted_hours, :action => :index
+  # end
 end
